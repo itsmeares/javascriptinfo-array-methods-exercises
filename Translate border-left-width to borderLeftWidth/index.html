@@ -1,0 +1,27 @@
+<!doctype html>
+<script src="https://en.js.cx/test/libs.js"></script>
+<script src="test.js"></script>
+<script>
+
+  // ...Your code...
+
+  function camelize(str) {
+    const removeDashes = str.split("-")
+    const intoCamelCase = removeDashes
+        .slice(1)
+        .map((str) => str.charAt(0).toUpperCase() + str.slice(1));
+
+    // take out original first item and put it at the index 0 in the array
+    const originalFirstItem = removeDashes.shift()
+    intoCamelCase.unshift(originalFirstItem)
+
+    const result = intoCamelCase.join("")
+
+    return result;
+  }
+
+  camelize("test-dumb-hehe")
+
+</script>
+
+</html>
