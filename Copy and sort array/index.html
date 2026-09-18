@@ -1,0 +1,24 @@
+<!doctype html>
+<script src="https://en.js.cx/test/libs.js"></script>
+<script src="test.js"></script>
+<script>
+  
+    function copySorted(arr) {
+        const copiedArr = [...arr];
+        return copiedArr.sort()
+    }
+
+    let arr = ["HTML", "JavaScript", "CSS"];
+
+    let sorted = copySorted(arr);
+
+    alert( sorted ); // CSS, HTML, JavaScript
+    alert( arr ); // HTML, JavaScript, CSS (no changes)
+    
+</script>
+<style>
+    body {
+        background-color: #303030;
+    }
+</style>
+</html>
